@@ -30,11 +30,12 @@ class bst:
         return t
 
     def traverseNode(self, node):
-        if(node.left is not None):
-            self.traverseNode(node.left)
-        print(node.value)
-        if(node.right is not None):
-            self.traverseNode(node.right)
+        if(node is not None):
+            if(node.left is not None):
+                self.traverseNode(node.left)
+            print(node.value)
+            if(node.right is not None):
+                self.traverseNode(node.right)
 
     def inOrderTraversal(self):
         node = self.root
